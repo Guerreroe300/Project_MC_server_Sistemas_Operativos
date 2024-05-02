@@ -1,0 +1,13 @@
+[Unit]
+Description= MinecraftTest Service
+
+[Service]
+User=minecraft
+Group=minecraft
+WorkingDirectory=/opt/mcServer
+ExecStart=/usr/bin/java -Xms128M -Xmx6500M -jar /opt/mcServer/forge-1.12.2-14.23.5.2859.jar nogui
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
